@@ -13,23 +13,22 @@ export default {
         component: () => <Login />
     }, {
         path: '/main',
-        component: (props: any) => (<>
-            
+        component: (props: any) => (<>            
             <RouterView routes={props.routes}></RouterView>
             <Index />
         </>),
         children: [{
             path: '/main/home',
-            component: () => <Home />
+            component: () => <p>首页</p>
         }, {
             path: '/main/classify',
-            component: () => <Classify />
+            component: () => <p>分类</p>
         }, {
             path: '/main/cart',
-            component: () => <Cart />
+            component: () => <p>购物车</p>
         }, {
             path: '/main/my',
-            component: () => <My />
+            component: () => <p>我的</p>
         }]
     }, {
         from: '*',
