@@ -1,6 +1,13 @@
 import React from 'react';
+import "./index.css"
 import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './App';
+import "./iconfont/iconfont.css"
+import App from './router/index';
+import StoreContext from './context/StoreContext'
+import store from './store/index'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<StoreContext.Provider value={store}>
+    <App />
+</StoreContext.Provider>
+    , document.getElementById('root'));
+
