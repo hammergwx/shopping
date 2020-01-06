@@ -29,6 +29,9 @@ export default {
         }, {
             path: '/main/my',
             component: () => <My />
+        },{
+            from: '/main',
+            to: '/main/home'
         }]
     }, {
         from: '*',
