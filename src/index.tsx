@@ -5,7 +5,7 @@ import App from './router/index';
 import StoreContext from './context/StoreContext'
 import store from './store/index'
 
-ReactDOM.render(<StoreContext.Provider value={store}>}
+ReactDOM.render(<StoreContext.Provider value={store}>
     <App />
 </StoreContext.Provider>
 , document.getElementById('root'));

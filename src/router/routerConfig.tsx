@@ -14,8 +14,9 @@ export default {
     }, {
         path: '/main',
         component: (props: any) => (<>
-            <Index />
+            
             <RouterView routes={props.routes}></RouterView>
+            <Index />
         </>),
         children: [{
             path: '/main/home',
