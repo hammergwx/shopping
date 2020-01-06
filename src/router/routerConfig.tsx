@@ -1,34 +1,37 @@
 import React from 'react'
 import RouterView from './RouterView'
-import Index from '../view/index'
+import Index from "../view/Index"
+import Home from "../view/Index/Home"
+import Classify from "../view/Index/Classify"
 import Cart from "../view/Index/Cart"
 import My from "../view/Index/My"
+import Login from "../view/Login"
 
 export default {
     routes: [{
         path: '/login',
-        component: ()=><p>登陆页面</p>
-    },{
+        component: () => <Login />
+    }, {
         path: '/main',
-        component: (props:any)=>(<>
-            <Index/>
+        component: (props: any) => (<>
+            <Index />
             <RouterView routes={props.routes}></RouterView>
         </>),
         children: [{
             path: '/main/home',
-            component: ()=><p>首页</p>
-        },{
+            component: () => <Home />
+        }, {
             path: '/main/classify',
-            component: ()=><p>分类</p>
-        },{
+            component: () => <Classify />
+        }, {
             path: '/main/cart',
-            component: ()=><Cart/>
-        },{
+            component: () => <Cart />
+        }, {
             path: '/main/my',
-            component: ()=><My/>
+            component: () => <My />
         }]
-    },{
-        Redirect: '*',
-        path: '/login'
+    }, {
+        from: '*',
+        to: '/login'
     }]
 }
