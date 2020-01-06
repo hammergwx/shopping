@@ -1,10 +1,12 @@
 import React from 'react';
-
+import './classify.css'
 const Classify:React.FC = () => {
     return (
-        <div>
-            <p>分类</p>
-        </div>
+      
+            <div className="classify">
+                <div className="box"></div>
+            </div>
+       
     );
 };
 
