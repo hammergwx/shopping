@@ -10,8 +10,13 @@ const Cart: React.FC = () => {
     }
     useEffect(() => {
         async function getList() {
+<<<<<<< HEAD
             // let res = await axios.get("http://169.254.52.89:8888/cart/index?typeId=1");
             // setData(res.data.data)
+=======
+            let res = await axios.get("http://169.254.52.89:8888/cart/index?typeId=7879879");
+            setData(res.data.data)
+>>>>>>> e7321ac595dd563738d7a85d7285bcfb87ebfc8d
         }
         getList()
     }, []);

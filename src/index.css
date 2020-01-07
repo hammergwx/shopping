@@ -1,14 +1,16 @@
-body,html,#root {
-  width:100%;
-  height:100% 
+body,
+html,
+#root {
+  width: 100%;
+  height: 100%;
 }
-#root{
+#root {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-*{
-  margin:0;
-  padding:0
+* {
+  margin: 0;
+  padding: 0;
 }
