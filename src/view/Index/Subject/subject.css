@@ -1,0 +1,58 @@
+.wrap-sub{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.topicItem{
+    width: 100%;
+    height: 21rem;
+    margin-top: .2rem;
+    background: #fff;
+    display: block;
+}
+.topicItem>img{
+    width: 100%;
+    height: 15rem;
+   
+}
+.topicItemPrice{
+    display: 100%;
+    height: 5.8rem;
+    margin-top: .2rem;
+    background: #fff;
+    display: block;
+}
+.topicItemPrice {
+    padding: .5rem .1rem .2rem;
+    font-size: 0.8rem;
+    text-align: center;
+    color: red;
+    line-height: .4rem;
+    height: .7rem;
+}
+.topicItemPrice>img {
+    width: 100%;
+    height: 4rem;
+}
+ .topicItemTitle {
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 1rem .1rem .1rem;
+    font-size: 0.8rem;
+    line-height: .4rem;
+    height: 1.7rem;
+}
+.topicItemSubtitle {
+    padding: .1rem .2rem;
+    font-size: 0.8rem;
+    color: grey;
+    height: 1.4rem;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
