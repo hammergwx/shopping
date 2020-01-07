@@ -19,6 +19,6 @@ footer a span {
 footer a.active {
   color: skyblue;
 }
-div {
+#root>div {
   flex: 1;
 }

@@ -1,14 +1,39 @@
-
 .classify{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    flex-shrink: 0;
 }
-.box{
+.serachbox{
     width: 100%;
-    height: 50px;
-    background: #f70;
-    flex-shrink: 0;
+    height: 40px;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    
+}
+.serachbox input{
+    flex: 1;
+    background: #eee;
+    margin: 5px 10px;
+    border:0;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+}
+.classify-content{
+    flex: 1;
+    background: chartreuse;
+    display: flex;
+}
+.c-left{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: coral;
+}
+.c-right{
+    flex: 1;
+    height: 100%;
+    background: crimson;
 }
