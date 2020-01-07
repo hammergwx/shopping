@@ -1,18 +1,17 @@
-// import React from 'react';
 import React, { useState, useEffect } from 'react';
-import axios from "axios"
+// import axios from "axios"
 import "./index.css"
 
 const Cart: React.FC = () => {
-    let [data, setData] = useState([]);
+    // let [data, setData] = useState([]);
     let [isCheck, setCheck] = useState(false);
     let click = () => {
         setCheck(!isCheck)
     }
     useEffect(() => {
         async function getList() {
-            let res = await axios.get("http://169.254.52.89:8888/cart/index?typeId=1");
-            setData(res.data.data)
+            // let res = await axios.get("http://169.254.52.89:8888/cart/index?typeId=1");
+            // setData(res.data.data)
         }
         getList()
     }, []);
