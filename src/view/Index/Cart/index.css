@@ -1,0 +1,133 @@
+.cart {
+  position: relative;
+}
+.serviceList {
+  width: 100%;
+  height: 2.4rem;
+  background: #f4f4f4;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.serviceList li {
+  flex: 1;
+  color: #666;
+  font-size: 0.72rem;
+  text-align: center;
+}
+.serviceList li span {
+  color: red;
+  margin-right: 0.45rem;
+  font-size: 0.9rem;
+}
+.cartGoodsListWrap {
+  width: 100%;
+  flex: 1;
+  flex-shrink: 0;
+  border-bottom: 1px solid #f4f4f4;
+}
+.cartGoodsListWrap .cartGoodsItem {
+  display: flex;
+  height: 6rem;
+  background: #fff;
+  margin-top: 1px;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  box-sizing: border-box;
+}
+.cartGoodsListWrap .cartGoodsItem .goodsImg {
+  width: 5rem;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  box-sizing: border-box;
+}
+.cartGoodsListWrap .cartGoodsItem .goodsImg img {
+  width: 100%;
+  display: block;
+}
+.cartGoodsListWrap .cartGoodsItem .cartGoodsMsg {
+  display: flex;
+  flex: 1;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cartGoodsListWrap .cartGoodsItem .cartGoodsMsg > div {
+  font-size: 0.8rem;
+}
+.cartGoodsListWrap .cartGoodsItem .cartGoodsMsg .red {
+  color: #f00;
+}
+.isCheckItem {
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.isCheckItem img {
+  width: 60%;
+  height: auto;
+}
+.cartGoodsListWrap .cartGoodsItem .cartGoodsNum {
+  font-size: 0.8rem;
+}
+.cartGoodsDo {
+  position: absolute;
+  bottom: 0;
+  height: 3rem;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.cartGoodsDo .cartMsgAll {
+  -webkit-flex: 1 1;
+  flex: 1 1;
+  line-height: 3rem;
+  font-size: 1rem;
+}
+.cartGoodsDo > div {
+  height: 100%;
+}
+.cartGoodsDo .cartAllDoButton {
+  width: auto;
+  padding: 0 0.5rem;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.cartGoodsDo .cartAllDoButton > div {
+  width: 100%;
+  font-size: 1rem;
+}
+.cartGoodsDo .cartAllDoButton {
+  width: auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartGoodsDo .cartAllDoButton {
+  font-size: 1rem;
+}
+.cartGoodsDo .cartAllDoButton.pay {
+  background: #ab2b2b;
+  color: #fff;
+  padding: 0;
+  width: 8rem;
+  flex-shrink: 0;
+}
+.cartGoodsDo .cartAllDoButton.pay {
+  font-size: 1rem;
+}
