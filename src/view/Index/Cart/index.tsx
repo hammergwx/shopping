@@ -1,4 +1,3 @@
-// import React from 'react';
 import React, { useState, useEffect } from 'react';
 import axios from "axios"
 import "./index.css"
@@ -11,7 +10,7 @@ const Cart: React.FC = () => {
     }
     useEffect(() => {
         async function getList() {
-            let res = await axios.get("http://169.254.52.89:8888/cart/index?typeId=1");
+            let res = await axios.get("http://169.254.52.89:8888/cart/index?typeId=7879879");
             setData(res.data.data)
         }
         getList()
