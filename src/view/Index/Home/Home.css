@@ -1,0 +1,37 @@
+.wrap-home{
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.banner{
+    width: 100%;
+    height: 202px;
+    background: saddlebrown;
+}
+.channelWrap{
+   width: 100%;
+   height: 70px;
+   padding: 5px 0;
+   background: #ffffff;
+   display: flex;
+   display: -webkit-flex;
+}
+.channelWrap .channelItem{
+    width: 100%;
+    height: 100%;
+}
+.channelItem>img{
+    width: 80px;
+    height: 80px;
+}
+.channelItem>img:first-child{
+    /* height: 80%; */
+    display: block;
+    padding: 5px;
+    margin: auto;
+}
+.channelItem>div:nth-child(2){
+    height: 20%;
+    font-size: 14px;
+    text-align: center;
+}
