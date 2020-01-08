@@ -1,6 +1,6 @@
 import {subjectType} from '../types/subject'
 import {observable,action} from 'mobx'
-import {Special} from '../../api/subject'
+import {Sub} from '../../api/subject'
 
 
 export default class subjectData{
@@ -9,8 +9,7 @@ export default class subjectData{
     
      @action 
      async Special(){
-         console.log(this.subjectList);
-         let res:any=await Special();
+         let res:any=await Sub();
          this.subjectList=res.getList;
          console.log(res.getList,'====-0-=========');
      }

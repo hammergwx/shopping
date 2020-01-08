@@ -1,3 +1,3 @@
 import request from  '../utils/request'
 
-export const Special=()=>request.get('/topic/list')
+export const Sub=()=>request.get('/topic/list')

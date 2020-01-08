@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React ,{useEffect}from 'react';
 import './subject.css'
 import useStore from '../../../utils/useStore'
 import {useObserver} from 'mobx-react-lite'
@@ -6,7 +6,7 @@ const Subject: React.FC = () => {
     let store =useStore();
     let {subjectL} =store;
     useEffect(()=>{
-        subjectL.Special()
+       
     })
     return (
         <div className='wrap-sub'> 
@@ -32,4 +32,4 @@ const Subject: React.FC = () => {
     );
 };
 
-export default Subject;  
+export default Subject; 
