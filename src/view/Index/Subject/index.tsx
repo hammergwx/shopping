@@ -1,6 +1,13 @@
-import React from 'react';
+import React ,{useEffect}from 'react';
 import './subject.css'
+import useStore from '../../../utils/useStore'
+import {useObserver} from 'mobx-react-lite'
 const Subject: React.FC = () => {
+    let store =useStore();
+    let {subjectL} =store;
+    useEffect(()=>{
+       
+    })
     return (
         <div className='wrap-sub'> 
              <a  className='topicItem' href="#/topicDetail/314">
