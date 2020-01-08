@@ -6,19 +6,18 @@
 }
 .logo {
   width: 100%;
-  padding: 5rem 0 1.5rem;
+  padding: 100px 0 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   img {
-    width: 9.6rem;
+    width: 196px;
   }
 }
 .loginMain {
-  padding: 1.8rem 0.4rem 0;
+  padding: 36px 8px 0;
   .inputWrap {
-    height: 5.4rem;
-    display: -webkit-flex;
+    height: 54px;
     display: flex;
     -webkit-justify-content: center;
     justify-content: center;
@@ -29,7 +28,7 @@
       height: 80%;
       border: none;
       width: 100%;
-      font-size: 1.2rem;
+      font-size: 15px;
       outline: none;
     }
   }
