@@ -8,7 +8,7 @@ export default class subjectData{
      subjectList:subjectType[]=[]
     
      @action 
-     async Special(){
+     async Sub(){
          let res:any=await Sub();
          this.subjectList=res.getList;
          console.log(res.getList,'====-0-=========');

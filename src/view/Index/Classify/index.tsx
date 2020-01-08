@@ -2,6 +2,7 @@ import React,{useEffect} from 'react';
 import useStore from '../../../utils/useStore'
 import './classify.css';
 import {useObserver} from 'mobx-react-lite'
+
 const Classify:React.FC = () => {
     let store=useStore();
     let {Classift} =store;
