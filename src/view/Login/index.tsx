@@ -1,7 +1,10 @@
 import React from 'react';
-import "./Login.scss";
+import "./Login.scss"
+import useStore from '../../utils/useStore';
+// import { useObserver } from 'mobx-react-lite';
 
 const Login: React.FC = () => {
+    let store = useStore();
     return (
         <div className="loginBox">
             <div className="logo">
