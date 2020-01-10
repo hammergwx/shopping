@@ -2,7 +2,6 @@ import React ,{useEffect}from 'react';
 import './subject.css'
 import useStore from '../../../utils/useStore'
 import {useObserver} from 'mobx-react-lite'
-
 export default () => {
     let store =useStore();
     let {Subj} =store;
