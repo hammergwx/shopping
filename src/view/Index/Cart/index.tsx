@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react';
-// import axios from "axios"
 import "./index.css"
+import useStore from "../../../utils/useStore"
+import { useObserver } from "mobx-react-lite"
 
 const Cart: React.FC = () => {
-    // let [data, setData] = useState([]);
+    let store = useStore();
+    let { Cart } = store;
     let [isCheck, setCheck] = useState(false);
     let click = () => {
         setCheck(!isCheck)
     }
     useEffect(() => {
-        async function getList() {
-            // let res = await axios.get("http://169.254.52.89:8888/cart/index?typeId=1");
-            // setData(res.data.data)
-        }
-        getList()
-    }, []);
+        Cart.CartFn()
+    }, [])
     return (
         <div className="cart">
             {/* {console.log(data)} */}
