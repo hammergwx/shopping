@@ -19,7 +19,7 @@ export default () => {
                         <img src={item.scene_pic_url} alt="" className='imgLazyload loadEnd' />
                         <div className='topicItemTitle'>{item.title}</div>
                         <div className='topicItemSubtitle'>{item.subtitle}</div>
-                    <div className='topicItemPrice'>{item.price_info}元</div>
+                        <div className='topicItemPrice'>{item.price_info}元</div>
                         </a>
                     )
                 })
