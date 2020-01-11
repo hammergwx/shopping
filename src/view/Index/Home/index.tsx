@@ -29,9 +29,7 @@ const Home: React.FC = () => {
             </Carousel>
           </WingBlank>
       </div>
-          
-     
-      
+              
       <div className="channelWrap">
         {Home.data.channel.map((item, index) => {
           return (
@@ -42,6 +40,7 @@ const Home: React.FC = () => {
           );
         })}
       </div>
+
       <div className="brandBox">
         <div className="brandTitle">品牌制造商直供</div>
         <div className="brandWrap">

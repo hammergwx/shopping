@@ -26,12 +26,14 @@
   display: flex;
   display: -webkit-flex;
   margin-top: 10px;
+  flex-shrink: 0;
 }
 
 .channelWrap .channelItem {
   width: 20%;
   height: 100%;
   padding-top: 10px;
+ 
   box-sizing: border-box;
 }
 
