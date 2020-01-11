@@ -120,7 +120,7 @@ const Home: React.FC = () => {
           </Carousel>
         </div>
       </div>
-
+      <div className="cateCoryWrap">
       {Home.data.categoryList.map(item => {
         return (
           <div key={item.id} className="cateGoryBox">
@@ -150,6 +150,8 @@ const Home: React.FC = () => {
           </div>
         );
       })}
+      </div>
+     
     </div>
   ));
 };

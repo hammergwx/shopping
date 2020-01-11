@@ -243,10 +243,17 @@
   margin-left: 5px;
 }
 
+.cateCoryWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .cateGoryBox {
   width: 100%;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 }
 
 .cateGoryName {
