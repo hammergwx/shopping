@@ -24,6 +24,7 @@
   padding: 5px 0;
   background: #ffffff;
   display: flex;
+  flex-shrink: 0;
   display: -webkit-flex;
   margin-top: 10px;
 }

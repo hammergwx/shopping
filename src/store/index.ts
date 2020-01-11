@@ -6,8 +6,8 @@ import Login from './moudel/Login'
 import Cart from './moudel/Cart'
 export default {
     Classift: new Classift(),
+    Home: new Home(),
     Subj: new Subj(),
-    Home:new Home(),
     Login: new Login(),
     Cart: new Cart()
 }

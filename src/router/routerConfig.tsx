@@ -12,7 +12,9 @@ export default {
     routes: [{
         path: '/login',
         component: () => <Login />
-    }, {
+    }, 
+   
+    {
         path: '/main',
         component: (props: any) => (<>
             <RouterView routes={props.routes}></RouterView>
