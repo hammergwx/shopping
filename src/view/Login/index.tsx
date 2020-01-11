@@ -31,7 +31,7 @@ const Login: React.FC = (props: any) => {
                 </div>
                 <div className="loginBtn" onClick={() => {
                     Login.LoginFn(obj)
-                    const { errno, data, errmsg } = Login.loginData;
+                    const { errno, data, errmsg } = Login.data;
                     if (errno === 0) {
                         if ({ ...data }.mobile === obj.mobile && { ...data }.password === obj.password) {
                             history.push("/main")

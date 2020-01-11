@@ -1,5 +1,8 @@
 
 export interface classType{
     id:number,
-    name:string
+    name:string,
+    currentBan:string,
+    currentTitle:string,
+    arr:any
 }

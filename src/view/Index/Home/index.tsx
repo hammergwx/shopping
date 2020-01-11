@@ -1,114 +1,144 @@
-import React from 'react';
-import './Home.css'
-const Home:React.FC = () => {
-    return (
-        <div className='wrap-home'>
-            <div className='banner'>
-                <img src="http://yanxuan.nosdn.127.net/bff2e49136fcef1fd829f5036e07f116.jpg" alt=""/>
-            </div>
-            <div className='channelWrap'>
-                <a href="#/categorys/1005000" className='channelItem'>
-                   
-                        <img className='imgLazyload loadEnd' src="http://yanxuan.nosdn.127.net/a45c2c262a476fea0b9fc684fed91ef5.png" alt=""/>
-                        <div>居家</div>
-                   
-                    
-                </a>
-                <a href="#/categorys/1005000" className='channelItem'>
-                    <img className='imgLazyload loadEnd' src="http://yanxuan.nosdn.127.net/a45c2c262a476fea0b9fc684fed91ef5.png" alt=""/>
-                    <div>居家</div>
-                </a>
-                <a href="#/categorys/1005000" className='channelItem'>
-                    <img className='imgLazyload loadEnd' src="http://yanxuan.nosdn.127.net/a45c2c262a476fea0b9fc684fed91ef5.png" alt=""/>
-                    <div>居家</div>
-                </a>
-            </div>
-            <div className='brandBox'>
-                <div className='brandTitle'>品牌制造商直供</div>
-                <div className='brandWrap'>
-                    <a href="#/brandDetail/1024000" className='brandItem'>
-                        <div className='brandItemName'>WMF制造商</div>
-                        <div className='brandItemMinPrice'>1de</div>
-                        <img className='imgLazyload loadEnd' src="http://yanxuan.nosdn.127.net/abcfa79205679db51198adc19c184dd1.jpg" alt=""/>
-                    </a>
-                    
-                    <a href="#/brandDetail/1024000" className='brandItem'>
-                        <div className='brandItemName'>WMF制造商</div>
-                        <div className='brandItemMinPrice'>qwdq</div>
-                        <img className='imgLazyload loadEnd' src="http://yanxuan.nosdn.127.net/4ea3f1e60dd77c45c218e503d721a1ed.jpg" alt=""/>
-                    </a>
-                    <a href="#/brandDetail/1024000" className='brandItem'>
-                        <div className='brandItemName'>WMF制造商</div>
-                        <div className='brandItemMinPrice'></div>
-                        <img className='imgLazyload loadEnd' src="http://yanxuan.nosdn.127.net/76638fb8e6990aadf837ce761c3b7399.jpg" alt=""/>
-                    </a>
-                    
-                    <a href="#/brandDetail/1024000" className='brandItem'>
-                        <div className='brandItemName'>WMF制造商</div>
-                        <div className='brandItemMinPrice'></div>
-                        <img className='imgLazyload loadEnd' src="http://yanxuan.nosdn.127.net/b5cd73d3b310bad02539412f064d4ea1.jpg" alt=""/>
-                    </a>
-                </div>
-                
-               
-            </div>
+import React, { useEffect } from "react";
+import useStore from "../../../utils/useStore";
+import { useObserver } from "mobx-react-lite";
+import "./Home.css";
+import { Carousel, WingBlank } from "antd-mobile"
+// import Item from "antd-mobile/lib/popover/Item";
+const Home: React.FC = () => {
+  let store = useStore();
+  let { Home } = store;
+  useEffect(() => {
+    Home.homeData();
+  }, []);
+  return useObserver(() => (
+    <div className="wrap-home">
 
-            <div className='newGoodsBox'>
-                <div className='newGoodsTitle'>新品首发</div>
-                <div className='newGoodsWrap'>
-                    <a href="#/goods/1116011" className='newGoodsItem'>
-                        <img className='imgLazyload loadEnd' src="http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png" alt=""/>
-                        <div className='newGoodsName'>蔓越莓曲奇 200克</div>
-                        <div className='newGoodsPrice'>￥36</div>
-                    </a>
-                    <a href="#/goods/1116011" className='newGoodsItem'>
-                        <img className='imgLazyload loadEnd' src="http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png" alt=""/>
-                        <div className='newGoodsName'>蔓越莓曲奇 200克</div>
-                        <div className='newGoodsPrice'>￥36</div>
-                    </a>
-                    <a href="#/goods/1116011" className='newGoodsItem'>
-                        <img className='imgLazyload loadEnd' src="http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png" alt=""/>
-                        <div className='newGoodsName'>蔓越莓曲奇 200克</div>
-                        <div className='newGoodsPrice'>￥36</div>
-                    </a>
-                    <a href="#/goods/1116011" className='newGoodsItem'>
-                        <img className='imgLazyload loadEnd' src="http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png" alt=""/>
-                        <div className='newGoodsName'>蔓越莓曲奇 200克</div>
-                        <div className='newGoodsPrice'>￥36</div>
-                    </a>
-                </div>
-            </div>
+      <div className="banner" >
+        <WingBlank >
+          <Carousel
+            autoplay={true}
+            infinite
+          >
+            {Home.data.banner.map(val => (
+              <img
+                src={val.image_url}
+                alt=""
+                style={{ width: '100%', height: '200px', verticalAlign: 'top' }}
+              />
+            ))}
+          </Carousel>
+        </WingBlank>
+      </div>
 
-            <div className='hotGoodsBox'>
-                <div className="hotGoodsTitle">人气推荐</div>
-                <div className='hotGoodsWrap'>
-                    <a href="#/goods/1006013" className='hotGoodsItem'>
-                         <img className='imgLazyload loadEnd' src="http://yanxuan.nosdn.127.net/583812520c68ca7995b6fac4c67ae2c7.png" alt=""/>
-                         <div className='hotGoodsInfos'>
-                             <div className='hotGoodsName'>双宫茧桑蚕丝被 空调被</div>
-                             <div className='hotGoodsInfo'>一级桑蚕丝，吸湿透气柔软</div>
-                             <div className='hotGoodsPrice'>￥65</div>
-                         </div>
-                    </a>
-                    <a href="#/goods/1006013" className='hotGoodsItem'>
-                         <img className='imgLazyload loadEnd' src="http://yanxuan.nosdn.127.net/583812520c68ca7995b6fac4c67ae2c7.png" alt=""/>
-                         <div className='hotGoodsInfos'>
-                             <div className='hotGoodsName'>双宫茧桑蚕丝被 空调被</div>
-                             <div className='hotGoodsInfo'>一级桑蚕丝，吸湿透气柔软</div>
-                             <div className='hotGoodsPrice'>￥65</div>
-                         </div>
-                    </a>
-                </div>
-            </div>
 
-            <div className='topGoodsBox'>
-                <div className='topGoodsTitle'>专题精选</div>
-                <div className='topGoodsWrap'></div>
-            </div>
 
-            <div className='cateGoryBox'></div>
+      <div className="channelWrap">
+        {Home.data.channel.map((item, index) => {
+          return (
+            <a key={index} href="#" className="channelItem">
+              <img className="imgLazyload loadEnd" src={item.icon_url} alt="" />
+              <div>{item.name}</div>
+            </a>
+          );
+        })}
+      </div>
+      <div className="brandBox">
+        <div className="brandTitle">品牌制造商直供</div>
+        <div className="brandWrap">
+          {Home.data.brandList.map((item, index) => {
+            return (
+              <a key={index} href="#/brandDetail/1024000" className="brandItem">
+                <div className="brandItemName">{item.name}</div>
+                <div className="brandItemMinPrice">{item.floor_price}</div>
+                <img
+                  className="imgLazyload loadEnd"
+                  src={item.new_pic_url}
+                  alt=""
+                />
+              </a>
+            );
+          })}
         </div>
-    );
-};
+      </div>
 
+      <div className="newGoodsBox">
+        <div className="newGoodsTitle">新品首发</div>
+        <div className="newGoodsWrap">
+          {Home.data.newGoodsList.map((item, index) => {
+            return (
+              <a key={index} href="#/goods/1116011" className="newGoodsItem">
+                <img
+                  className="imgLazyload loadEnd"
+                  src={item.list_pic_url}
+                  alt=""
+                />
+                <div className="newGoodsName">{item.name}</div>
+                <div className="newGoodsPrice">￥{item.retail_price}</div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="hotGoodsBox">
+        <div className="hotGoodsTitle">人气推荐</div>
+        <div className="hotGoodsWrap">
+          {Home.data.hotGoodsList.map((item, index) => {
+            return (
+              <a key={index} href="#/goods/1006013" className="hotGoodsItem">
+                <img
+                  className="imgLazyload loadEnd"
+                  src={item.list_pic_url}
+                  alt=""
+                />
+                <div className="hotGoodsInfos">
+                  <div className="hotGoodsName">{item.name}</div>
+                  <div className="hotGoodsInfo">{item.goods_brief}</div>
+                  <div className="hotGoodsPrice">￥{item.retail_price}</div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="topGoodsBox">
+        <div className="topGoodsTitle">专题精选</div>
+        <div className="topGoodsWrap">
+          <Carousel className="space-carousel"
+            frameOverflow="visible"
+            cellSpacing={10}
+            slideWidth={0.8}
+            autoplay={false}
+            infinite
+          >
+            {Home.data.topicList.map((val, index) => (
+              <a
+                key={index}
+                href="#"
+              >
+                <img
+                  src={val.item_pic_url}
+                  alt="" />
+                <p>
+                  <span className='title'>{val.title}</span>
+                  <span className='price'>￥{val.price_info}元起</span>
+                </p>
+              </a>
+            ))}
+          </Carousel>
+        </div>
+      </div>
+
+      <div className="cateGoryBox">
+        <div className="itemsBox">
+          <div className="cateGoryName">居家</div>
+          <a href="#">
+            {/* <img src="" alt=""/> */}
+          </a>
+        </div>
+      </div>
+    </div>
+  ));
+};
 export default Home;

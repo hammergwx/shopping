@@ -9,6 +9,7 @@ const Classify:React.FC = () => {
     useEffect(()=>{
         Classift.coctlogIndex()
     },[])
+    
     return useObserver(()=>(
             <div className="classify">
                 <div className="serachbox">
@@ -18,11 +19,34 @@ const Classify:React.FC = () => {
                     <div className="c-left">
                         {
                             Classift.list.map((item,index)=>{
-                                return <div className='barItem'  key={index}>{item.name}</div>
+                                return <div onClick={()=>{Classift.catalogCurrent(item.id)}}  className='barItem'  key={index}>{item.name}</div>
                             })
                         }
                     </div>
-                    <div className="c-right"></div>
+                    <div className="c-right">
+                    <div className="rightBanner">
+                            <img src={Classift.currentBan} alt=""/>
+                        </div>
+                        <div className="rightTitle">
+                            <span>-  {Classift.currentTitle}分类  -</span>                           
+                        </div>    
+                        <div className='subCategory'> 
+                      {
+                          Classift.goodList.length?
+                          Classift.goodList.map((item,index)=>{
+                              return <a key={index} href="#" className='subCategoryItem'>
+                              <img className='imgLazyload loadEnd' src={item.wap_banner_url} alt=""/>
+                          <div className='subCategoryItemName'>{item.name}</div>
+                          </a>
+                          }):Classift.arr.map((item,index)=>{
+                            return <a key={index} href="#" className='subCategoryItem'>
+                            <img className='imgLazyload loadEnd' src={item.wap_banner_url} alt=""/>
+                        <div className='subCategoryItemName'>{item.name}</div>
+                        </a>
+                        })
+                      }
+                        </div>
+                    </div>
                 </div>
             </div>
        
