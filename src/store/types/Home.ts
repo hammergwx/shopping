@@ -65,6 +65,8 @@ interface categoryListType{
     name: string,
     goodsList: newGoodsListType[]
 }
+
+
 export interface homeType{
     banner:bannerType[],
     channel: channelType[],
@@ -73,4 +75,5 @@ export interface homeType{
     brandList:brandListType[],
     topicList:topicListType[],
     categoryList:categoryListType[]
+    
 }

@@ -1,15 +1,22 @@
 import React, { useEffect } from "react";
+import {withRouter,useHistory} from 'react-router-dom'
 import useStore from "../../../utils/useStore";
 import { useObserver } from "mobx-react-lite";
 import "./Home.css";
 import { Carousel, WingBlank } from "antd-mobile";
-import Item from "antd-mobile/lib/popover/Item";
-const Home: React.FC = () => {
+const Home: React.FC = (props:any) => {
+  let history=useHistory()
   let store = useStore();
   let { Home } = store;
   useEffect(() => {
     Home.homeData();
   }, []);
+  let channeClick=(item:any)=>{
+    
+  
+    history.push({pathname:"/brandDetai",state:item.id})
+  }
+  
   return useObserver(() => (
     <div className="wrap-home">
       <div className="banner">
@@ -30,7 +37,7 @@ const Home: React.FC = () => {
       <div className="channelWrap">
         {Home.data.channel.map((item, index) => {
           return (
-            <a key={index} href="#" className="channelItem">
+            <a key={index} href="#" className="channelItem" >
               <img className="imgLazyload loadEnd" src={item.icon_url} alt="" />
               <div>{item.name}</div>
             </a>
@@ -42,7 +49,7 @@ const Home: React.FC = () => {
         <div className="brandWrap">
           {Home.data.brandList.map((item, index) => {
             return (
-              <a key={index} href="#/brandDetail/1024000" className="brandItem">
+              <a key={index} href="#" className="brandItem" onClick={()=>{channeClick(item)}}> 
                 <div className="brandItemName">{item.name}</div>
                 <div className="brandItemMinPrice">{item.floor_price}</div>
                 <img
@@ -155,4 +162,4 @@ const Home: React.FC = () => {
     </div>
   ));
 };
-export default Home;
+export default withRouter(Home);

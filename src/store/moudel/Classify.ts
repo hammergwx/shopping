@@ -26,25 +26,18 @@ export default class ClassifyData{
     async coctlogIndex(){
         let res:any= await coctlogIndex();
         this.list = res.categoryList;
-        // console.log(this.list)
         this.currentBan=res.currentCategory.wap_banner_url;
         this.currentTitle=res.currentCategory.name;
         this.arr=res.currentCategory.subCategoryList;
-        
-        console.log(this.arr,'arr====')
     }
 
 
     @action 
     async catalogCurrent(id:number){
         let res:any= await catalogCurrent({id})
-        // console.log(res.currentCategory.wap_banner_url)
-    //    console.log(res.currentCategory.subCategoryList)
        this.goodList=res.currentCategory.subCategoryList;
        this.goodTxt=res.currentCategory;
-    //    console.log(this.goodList)
     this.currentBan=res.currentCategory.wap_banner_url;
     this.currentTitle=res.currentCategory.name;
-    // console.log(this.wap_banner_url)
     }
 }

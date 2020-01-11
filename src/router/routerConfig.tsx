@@ -7,7 +7,7 @@ import Classify from "../view/Index/Classify"
 import Cart from "../view/Index/Cart"
 import My from "../view/Index/My"
 import Login from "../view/Login"
-
+import BrandDetai from '../view/Detail/brandDetai'
 export default {
     routes: [{
         path: '/login',
@@ -42,7 +42,12 @@ export default {
             from: '/main',
             to: '/main/home'
         }]
-    }, {
+    },
+    {
+        path:'/brandDetai',
+        component:()=><BrandDetai />
+    }
+    , {
         from: '*',
         to: '/login'
     }]
