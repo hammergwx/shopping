@@ -1,7 +1,6 @@
 import {classType} from '../types/Classify'
 import {observable,action} from 'mobx'
 import {coctlogIndex,catalogCurrent} from '../../api/Classify';
-import { isTemplateElement } from '@babel/types';
 export default class ClassifyData{
     @observable//左边的分类类型
     list:classType[]=[];

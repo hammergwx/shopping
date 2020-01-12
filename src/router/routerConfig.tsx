@@ -7,13 +7,16 @@ import Classify from "../view/Index/Classify"
 import Cart from "../view/Index/Cart"
 import My from "../view/Index/My"
 import Login from "../view/Login"
-
+import SubDetail from '../view/Detail/subDetail/sbuDetail'
 export default {
     routes: [{
         path: '/login',
         component: () => <Login />
     }, 
-   
+    {
+        path: '/SubDetail',
+        component: () => <SubDetail />
+    }, 
     {
         path: '/main',
         component: (props: any) => (<>

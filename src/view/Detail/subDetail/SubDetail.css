@@ -1,0 +1,53 @@
+.noTabPageContent {
+    padding-top: 52px;
+    min-height: 100%;
+}
+.topicDetail {
+    width: 100%;
+    overflow-x: hidden;
+}
+.header {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    line-height: 50px;
+    box-shadow: 0 0.04rem 0.08rem 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
+    z-index: 10;
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.header .left, .header .right {
+    width: 30px;
+    height: 50px;
+}
+.header>div {
+    height: 100%;
+}
+.header .title {
+    -webkit-flex: 1 1;
+    text-align: center;
+    flex: 1 1;
+    font-size: 16px;
+}
+
+.topicDetailImg img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
