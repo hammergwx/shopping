@@ -1,7 +1,7 @@
 import { homeType } from "../types/Home";
 
 import { observable, action } from "mobx";
-import { homeData, brandList,goodListData } from "../../api/Home";
+import { homeData, brandList,goodListData ,googDetail} from "../../api/Home";
 export default class HomeData {
   @observable
   data: homeType = {
@@ -16,13 +16,14 @@ export default class HomeData {
   };
   @observable
   brandData: any = [];
+  @observable                                                                                                                                                                                                                                                                                                                                                             
+  goodData:any=[];
   @observable
-  goodData:any=[]
+  googDetailData:any=[];
   @action
   async homeData() {
     let res: any = await homeData();
     this.data = res;
-    console.log(this.data);
   }
   @action
   async brandList(id: number) {
@@ -31,7 +32,13 @@ export default class HomeData {
   }
   @action 
   async goodListData(){
-       let res:any=await goodListData();
-       console.log(res) 
+       let res:any = await goodListData();
+       this.goodData=res.data
+  }
+  @action
+  async googDetail(id:number){
+    let res:any=await googDetail({id})
+    this. googDetailData=res.info
+    console.log(this. googDetailData)
   }
 }

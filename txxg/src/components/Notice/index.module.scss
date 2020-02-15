@@ -1,0 +1,60 @@
+.tip_page {
+    h3 {
+        width: 100%;
+        margin: 40px 0 15px 0;
+        text-align: center;
+        font-size: .4rem;
+    }
+}
+
+.fanghu_card {
+    max-width: 670px;
+    /* height: 998px; */
+    margin: 20px 20px 0px 20px;
+    border-radius: 5px;
+    background: #F8F8F8;
+    padding: 5px 15px 20px 15px;
+    box-sizing: border-box;
+}
+
+.fanghu_title_warp {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.fanghu_icon {
+    width: .35rem;
+    height: .35rem;
+}
+
+.fanghu_title {
+    font-size: .3rem;
+    font-weight: 500;
+    margin-left: .2rem;
+}
+
+.fanghu_item {
+    // margin-top: 16px;
+    position: relative;
+}
+
+.fanghu_item_point {
+    width: 6px;
+    height: 6px;
+    background: #005DFF;
+    border-radius: 4px;
+    margin-top: 14px;
+    margin-right: 16px;
+    position: absolute;
+}
+
+.fanghu_item_text {
+    font-weight: normal;
+    font-size: .24rem;
+    line-height: 30px;
+    color: #222222;
+    margin-left: 16px;
+}

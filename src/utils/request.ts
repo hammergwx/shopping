@@ -1,6 +1,6 @@
 import axios from 'axios'
 const instance = axios.create({
-  baseURL: 'http://169.254.52.89:8888',
+  baseURL: 'http://192.168.2.104:8888',
  // withCredentials: true // 跨域类型时是否在请求中协带cookie
 })
 const getNewHeaders = () =>{

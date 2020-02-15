@@ -15,10 +15,14 @@
 .brandDetailWrap .bannerTitle {
   width: 100%;
   height: 50px;
-  line-height: 50px;
   background: #fff;
-  text-align: center;
   margin-bottom: 5px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .brandDetailWrap .bannerPic {
@@ -40,4 +44,45 @@
   text-indent: 2em;
   color: grey;
   box-sizing: border-box;
+}
+
+.goodListWrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 0 3px;
+  margin-top: 10px;
+}
+
+.goodListWrap .goodItem {
+  width: 49%;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.goodListWrap .goodItem .goodPic {
+  width: 100%;
+  height: 170px;
+}
+
+.goodListWrap .goodItem .goodName {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.goodListWrap .goodItem .goodPrice {
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  color: crimson;
 }

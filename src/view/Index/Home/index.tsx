@@ -16,7 +16,9 @@ const Home: React.FC = (props:any) => {
   
     history.push({pathname:"/brandDetai",state:item.id})
   }
-  
+  let goodClick=(item:any)=>{
+    history.push({pathname:'/goodDetail',state:item.id})
+  }
   return useObserver(() => (
     <div className="wrap-home">
       <div className="banner">
@@ -68,7 +70,7 @@ const Home: React.FC = (props:any) => {
         <div className="newGoodsWrap">
           {Home.data.newGoodsList.map((item, index) => {
             return (
-              <a key={index} href="#/goods/1116011" className="newGoodsItem">
+              <a key={index} href="#" className="newGoodsItem" onClick={()=>{goodClick(item)}}>
                 <img
                   className="imgLazyload loadEnd"
                   src={item.list_pic_url}

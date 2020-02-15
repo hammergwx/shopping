@@ -1,0 +1,112 @@
+.quick_page {
+  background: #eef5ff;
+  padding: 20px 40px;
+  margin-top: 80px;
+}
+
+.tab_top {
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab_top h3 span {
+  color: #09f;
+}
+
+.area_change {
+  width: 80px;
+  height: 24px;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 0;
+  top: 12px;
+  border: 1px solid #09f;
+  border-radius: 10px;
+  outline: none;
+  color: #09f;
+  font-size: 12px;
+}
+
+.tab_box {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.tab_item {
+  flex: 1;
+  text-align: center;
+}
+
+.tab_item .add,
+.tab_item .confirm,
+.tab_item .deal,
+.tab_item .dead {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.tab_item .add {
+  color: #005dff;
+}
+
+.tab_item .confirm {
+  color: #f55253;
+}
+
+.tab_item .deal {
+  color: #178b50;
+}
+
+.tab_item .text {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #66666c;
+}
+
+.tab_share_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  display: flex;
+  margin-top: 25px;
+}
+
+.tab_share_box .tab_share_btn {
+  height: 33px;
+  padding-left: 38px;
+  padding-right: 7px;
+  line-height: 33px;
+  font-size: 14px;
+  color: #005dff;
+  border: 1px solid #005dff;
+  background: url(https://mat1.gtimg.com/yslp/yyh5/mapview/images/shareicon.png) 11px center no-repeat #fff;
+  background-size: 18px 18px;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.tab_share_box .tab_look_btn {
+  height: 33px;
+  padding-left: 38px;
+  padding-right: 7px;
+  line-height: 33px;
+  font-size: 14px;
+  color: #005dff;
+  border: 1px solid #005dff;
+  background: url(https://mat1.gtimg.com/news/images/inews/2020/feiyan/18/img/group.png) 11px center no-repeat #fff;
+  background-size: 18px 18px;
+  border-radius: 15px;
+  margin: 0 auto;
+}

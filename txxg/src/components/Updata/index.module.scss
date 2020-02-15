@@ -1,0 +1,111 @@
+.updata {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .updata_title {
+        width: 100%;
+        height: 24px;
+        line-height: 24px;
+        color: #737373;
+        font-size: 12px;
+        margin-top: 4px;
+        margin-left: 20px;
+        display: flex;
+        .d {
+            padding-right: 6px;
+            margin-right: 6px;
+            position: relative;
+        }
+    }
+}
+
+.recentNumber {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding: 0 20px 15px;
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.confirm {
+    flex: 1;
+    margin-right: 2px;
+    position: relative;
+    text-align: center;
+    background-color: #FDF1F1;
+    .add {
+        font-size: 12px;
+        color: #7c7c7c;
+        padding-top: 6px;
+        line-height: 20px;
+        span {
+            color: #F55253;
+        }
+    }
+    .number {
+        font-size: 22px;
+        font-weight: bold;
+        color: #F55253;
+        height: auto;
+        line-height: 23px;
+        margin-bottom: 4px;
+        padding-top: 6px;
+    }
+    .text {
+        font-size: 12px;
+        color: #222;
+        background-color: #FFE0E0;
+        height: 27px;
+        line-height: 27px;
+    }
+}
+
+.confirm:nth-child(2) {
+    background-color: #FFF7ED;
+    .add {
+        span {
+            color: #FF961E;
+        }
+    }
+    .number {
+        color: #FF961E;
+    }
+    .text {
+        background-color: #FFEED9;
+    }
+}
+
+.confirm:nth-child(3) {
+    background-color: #FFF7ED;
+    .add {
+        span {
+            color: #178B50;
+        }
+    }
+    .number {
+        color: #178B50;
+    }
+    .text {
+        background-color: #DFEEE6;
+    }
+}
+
+.confirm:nth-child(4) {
+    background-color: #F8F8F8;
+    border-radius: 0 6px 6px 0;
+    .add {
+        span {
+            color: #66666c;
+        }
+    }
+    .number {
+        color: #66666c;
+    }
+    .text {
+        background-color: #EEEEEE;
+    }
+}

@@ -8,6 +8,7 @@ import Cart from "../view/Index/Cart"
 import My from "../view/Index/My"
 import Login from "../view/Login"
 import BrandDetai from '../view/Detail/brandDetai'
+import GoodListDetail from '../view/Detail/goodListDetail'
 export default {
     routes: [{
         path: '/login',
@@ -47,7 +48,12 @@ export default {
         path:'/brandDetai',
         component:()=><BrandDetai />
     }
-    , {
+    ,
+    {
+        path:'/goodDetail',
+        component:()=><GoodListDetail/>
+    } 
+    ,{
         from: '*',
         to: '/login'
     }]
