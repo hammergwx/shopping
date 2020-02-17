@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="top">
+      <view>目标</view>
+       <view>习惯</view>
+        <view>手记</view>
+    </view>
+
+    <view class="main">
+      <view class="items">看一场电影</view>
+      <view class="items">玩一次保龄球</view>
+      <view class="items">玩一次射箭</view>
+      <view class="items">练几首自己的经典曲目</view>
+      <view class="items">好好</view>
+    </view>
+    <view class="abtn">+</view>
+</view>

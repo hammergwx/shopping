@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="container">
+    <text>通知</text>
+</view>
