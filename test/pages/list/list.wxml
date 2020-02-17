@@ -1,0 +1,10 @@
+<view class="app">
+  <view class="header">
+    <text class="{{ind===index?'active':''}}" wx:for="{{nav}}" bindtap='onTab' data-index="{{index}}">{{item.name}}</text>
+  </view>
+  <view class="main">
+    <view class="content">
+      <text wx:for="{{nav[ind].main}}">{{item.title}}</text>
+    </view>
+  </view>
+</view>
