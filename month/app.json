@@ -1,0 +1,29 @@
+{
+  "pages":[    
+      "pages/list/list",
+      "pages/index/index",
+      "pages/square/square"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "有爱清单",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+    {
+      "pagePath":"pages/list/list",
+      "text":"清单"
+    },
+    {
+      "pagePath": "pages/square/square",
+      "text": "广场"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "我的"
+    }
+    ]
+  }
+}
