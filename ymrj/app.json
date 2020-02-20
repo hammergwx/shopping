@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/date/index",
+    "pages/my/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#007ACC",
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#4A4A4A"
+
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "gray",
+    "selectedColor": "red",
+    "position": "bottom",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "人生进度"
+    },{
+      "pagePath": "pages/date/index",
+      "text": "日期计算"
+    },{
+      "pagePath": "pages/my/index",
+      "text": "我的"
+    }]
+  }
+}
